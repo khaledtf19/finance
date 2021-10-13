@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote
+{% endblock %}
+
+{% block main %}
+        <form action="/changepass" method="post" class="form_container">
+            <lable>Old password</lable>
+            <input type="password" name="old_pass" class="form-control">
+            <lable>New password</lable>
+            <input type="password" name="new_pass" class="form-control">
+            <lable>Confirm password</lable>
+            <input type="password" name="confirmation" class="form-control">
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </form>
+{% endblock %}

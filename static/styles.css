@@ -1,0 +1,80 @@
+nav .navbar-brand
+{
+    /* size for brand */
+    font-size: xx-large;
+}
+
+/* Colors for brand */
+nav .navbar-brand .blue
+{
+    color: #537fbe;
+}
+nav .navbar-brand .red
+{
+    color: #ea433b;
+}
+nav .navbar-brand .yellow
+{
+    color: #f5b82e;
+}
+nav .navbar-brand .green
+{
+    color: #2e944b;
+}
+
+main .form-control
+{
+    /* Center form controls */
+    display: inline-block;
+
+    /* Override Bootstrap's 100% width for form controls */
+    width: auto;
+}
+
+main
+{
+    /* Scroll horizontally as needed */
+    overflow-x: auto;
+
+    /* Center contents */
+    text-align: center;
+}
+
+main img
+{
+    /* Constrain images on small screens */
+    max-width: 100%;
+}
+
+/*table {*/
+/*  border-collapse: collapse;*/
+/*  width: 100%;*/
+/*}*/
+
+/*th, td {*/
+/*  text-align: left;*/
+/*  padding: 8px;*/
+/*}*/
+
+/*th {*/
+/*     background-color: #A8A9AA;*/
+/*}*/
+
+/*table, td, th {*/
+/*  border: 1px solid #ddd;*/
+/*}*/
+
+/*tr:nth-child(even) {background-color: #f2f2f2;}*/
+
+.form_container {
+ display:flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ margin:0 auto;
+ width:100%;
+ max-width: 150px;
+}
+button {
+    margin-top:10px;
+}

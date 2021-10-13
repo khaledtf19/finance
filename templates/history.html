@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote
+{% endblock %}
+
+{% block main %}
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Type</th>
+                <th>Shares</th>
+                <th>Price</th>
+                <th>Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for data in alldata %}
+                <tr>
+                    <td>{{ data["symbol"] }}</td>
+                    <td>{{ data["the_type"] }}</td>
+                    <td>{{ data["shares"] }}</td>
+                    <td>{{ data["cost"] | usd}}</td>
+                    <td>{{ data["the_time"] }}</td>
+                </tr>
+
+            {% endfor %}
+        </tbody>
+
+    </table>
+
+{% endblock %}

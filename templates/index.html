@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote
+{% endblock %}
+
+{% block main %}
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Name</th>
+                <th>Shares</th>
+                <th>Price</th>
+                <th>TOTAL</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for data in alldata %}
+                <tr>
+                    <td>{{ data["symbol"] }}</td>
+                    <td>{{ data["name"] }}</td>
+                    <td>{{ data["shares"] }}</td>
+                    <td>{{ data["cost"] | usd }}</td>
+                    <td>{{ data["total"] | usd }}</td>
+                </tr>
+
+            {% endfor %}
+            <tr>
+                <td>CASH</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>{{ usercash | usd }}</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>{{ total_user_pay | usd }}</td>
+            </tr>
+
+        </tbody>
+
+    </table>
+
+{% endblock %}
